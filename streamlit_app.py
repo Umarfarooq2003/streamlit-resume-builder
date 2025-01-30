@@ -518,6 +518,7 @@ def generate_pdf(data):
 
 # Streamlit App
 st.title("MastermindHub Resume Generator")
+st.subheader("Built by UMARFAROOQ")
 st.subheader("Enter Your Gemini API Key")
 
 # Input API Key
