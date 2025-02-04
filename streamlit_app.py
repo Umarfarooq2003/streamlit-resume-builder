@@ -688,9 +688,7 @@ if api_key:
             elif not phone_number:
                 st.warning("Please enter your phone number!")
             elif not email:
-                st.warning("Please enter your email address!")
-            elif not linkedin_url:
-                st.warning("Please enter your LinkedIn URL!")            
+                st.warning("Please enter your email address!")            
             elif not summary:
                 st.warning("Please enter your Professional Summary!")
             elif not any(exp["role"] and exp["company"] and exp["description"] for exp in experiences):  # Ensure role, company, and description are provided
