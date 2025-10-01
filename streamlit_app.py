@@ -65,7 +65,7 @@ def validate_phone_number(phone_number):
 def validate_gemini_api_key(api_key):
     try:
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel("gemini-1.5-flash")  # Use the correct model name
+        model = genai.GenerativeModel("gemini-2.5-flash")  # Use the correct model name
         model.generate_content("Test the Gemini API")
         return True
     except Exception as e:
@@ -100,7 +100,7 @@ def refine_experience(api_key, experience):
     try:
         # Configure Gemini with the API key
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel("gemini-1.5-flash")
+        model = genai.GenerativeModel("gemini-2.5-flash")
 
         # Request Gemini to refine the work experience into three concise bullet points
         response = model.generate_content(f"Refine the following work experience into three concise bullet points: {experience}")
@@ -136,7 +136,7 @@ def refine_project(api_key, project_description):
     try:
         # Configure Gemini with the API key
         genai.configure(api_key=api_key)  # Set up API configuration
-        model = genai.GenerativeModel("gemini-1.5-flash")  # Choose the Gemini model
+        model = genai.GenerativeModel("gemini-2.5-flash")  # Choose the Gemini model
 
         # Request Gemini to refine the project description into concise bullet points
         response = model.generate_content(f"Refine the following project description into three concise bullet points: {project_description}")
