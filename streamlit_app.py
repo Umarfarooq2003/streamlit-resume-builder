@@ -76,7 +76,7 @@ def validate_gemini_api_key(api_key):
 def refine_summary(api_key, summary):
     try:
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel("gemini-1.5-flash")
+        model = genai.GenerativeModel("gemini-2.5-flash")
         
         # Refine the summary with an ATS-friendly approach (3-line, concise)
         prompt = f"Please improve this summary to make it concise and ATS-friendly, in 3 lines: {summary}"
